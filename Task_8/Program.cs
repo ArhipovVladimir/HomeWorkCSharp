@@ -6,17 +6,16 @@
 
 Console.Clear();
 Console.WriteLine("Введите число");
-int num= Convert.ToInt32(Console.ReadLine());
+int num = Convert.ToInt32(Console.ReadLine());
 
 int count = 1;
 Console.Write($"все четные лисла от 1 и до {num}- ");
 
-while (count<num+1)
+while (count <= num)
 {
     if (count % 2 == 0)
     {
         Console.Write($"{count}, ");
     }
-count++;
+    count++;
 }
-
