@@ -10,9 +10,9 @@ Console.WriteLine("Введите число");
 int num= Convert.ToInt32(Console.ReadLine());
 if (num % 2 == 0)
 {
-    Console.WriteLine($"Ввеедное число {num} четное");
+    Console.WriteLine($"Да, ввеедное число {num} - четное");
 }
 else 
 {
-    Console.WriteLine($"введенное число {num} нечетное");
+    Console.WriteLine($"Нет, введенное число {num} - нечетное");
 } 
