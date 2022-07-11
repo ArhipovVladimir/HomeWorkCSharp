@@ -7,7 +7,20 @@
   Console.Clear();
   Console.WriteLine("Веедите трехзначное число");
   int num = Convert.ToInt32(Console.ReadLine());
-  int resalt = num;
-  resalt = resalt / 10;
-  resalt = resalt % 10;
-  Console.WriteLine(resalt);
+  if (num < 0)
+    {
+        num=num*-1;
+    }
+
+int resalt = num;
+
+  if (num > 99 && num < 1000)
+     {
+         resalt = resalt / 10;
+         resalt = resalt % 10;
+         Console.WriteLine(resalt);
+     }
+else
+    {
+        Console.WriteLine("число не техзначное");
+    }
