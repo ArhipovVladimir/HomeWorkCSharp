@@ -4,6 +4,21 @@
 // 78 -> третьей цифры нет
 // 32679 -> 6
 
+int FriNumFind(int resalt)
+{
+    string numStr=Convert.ToString(resalt);
+    int len = numStr.Length; 
+    int poz = len - 2;
+    int count = 1;
+    while (count < poz)
+    {
+        resalt = resalt / 10;
+        count++;
+    }
+    resalt = resalt % 10;
+
+    return resalt;
+}
 
 Console.Clear();
 Console.WriteLine("Веедите число. Компьютер найдет его третью цифру");
@@ -23,14 +38,4 @@ else
     Console.WriteLine("Третьей цифры нет");
 }
 
-int FriNumFind(int resalt)
-{
-    for (int count = 1; count <= 2; count++)
-    {
-        resalt = resalt / 10;
-    }
 
-    resalt = resalt % 10;
-
-    return resalt;
-}
