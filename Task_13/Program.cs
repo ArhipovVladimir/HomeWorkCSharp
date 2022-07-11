@@ -8,29 +8,29 @@
 Console.Clear();
 Console.WriteLine("Веедите число. Компьютер найдет его третью цифру");
 int num = Convert.ToInt32(Console.ReadLine());
-if (num <0)
-    {
-        num=num*-1;
-    }
+if (num < 0)
+{
+    num = num * -1;
+}
 
 if (num > 99)
-    {
-        int FriNum = FriNumFind (num);
-        Console.WriteLine(FriNum);
-    }
+{
+    int FriNum = FriNumFind(num);
+    Console.WriteLine(FriNum);
+}
 else
+{
+    Console.WriteLine("Третьей цифры нет");
+}
+
+int FriNumFind(int resalt)
+{
+    for (int count = 1; count <= 2; count++)
     {
-        Console.WriteLine("Третьей цифры нет");
+        resalt = resalt / 10;
     }
 
-int FriNumFind (int resalt)
-{ 
-    for (int count=1; count <= 2; count++)
-        {
-            resalt = resalt / 10;
-        }
+    resalt = resalt % 10;
 
-        resalt = resalt % 10;
-
-        return resalt;
+    return resalt;
 }
