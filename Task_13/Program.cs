@@ -1,22 +1,26 @@
 ﻿// Задача 13: Напишите программу, которая выводит
 // третью цифру заданного числа или сообщает, что третьей цифры нет.
-// 645 -> 5 в условии ошибка по моему при данном задании ответ дб 6
+// 645 -> 5 
 // 78 -> третьей цифры нет
 // 32679 -> 6
 
 int FriNumFind(int resalt) // решение функции поиска 3 цифры с начала 
 {
-    string numStr=Convert.ToString(resalt);
-    int len = numStr.Length; 
-    int poz = len - 2;
+    int len = 0;
     int count = 1;
-    while (count < poz)
+    int ostDiv =resalt;
+    while (ostDiv != 0)
     {
-        resalt = resalt / 10;
+        ostDiv = ostDiv / 10;
+        len++;
+    }
+    while (count < len -2)
+    {
+        resalt=resalt/10;
         count++;
     }
-    resalt = resalt % 10;
-
+    resalt = resalt % 10;   
+    
     return resalt;
 }
 
@@ -31,11 +35,11 @@ if (num < 0)
 if (num > 99)
 {
     int FriNum = FriNumFind(num);
-    Console.WriteLine(FriNum);
+    Console.WriteLine($"{num} -> {FriNum}");
 }
 else
 {
-    Console.WriteLine("Третьей цифры нет");
+    Console.WriteLine($"{num} -> Третьей цифры нет");
 }
 
 
