@@ -4,7 +4,7 @@
 // 78 -> третьей цифры нет
 // 32679 -> 6
 
-int FriNumFind(int resalt)
+int FriNumFind(int resalt) // решение функции поиска 3 цифры с начала 
 {
     string numStr=Convert.ToString(resalt);
     int len = numStr.Length; 
