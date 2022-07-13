@@ -6,18 +6,9 @@
 
 int FriNumFind(int resalt) // решение функции поиска 3 цифры с начала 
 {
-    int len = 0;
-    int count = 1;
-    int ostDiv =resalt;
-    while (ostDiv != 0)
+    while (resalt>999)
     {
-        ostDiv = ostDiv / 10;
-        len++;
-    }
-    while (count < len -2)
-    {
-        resalt=resalt/10;
-        count++;
+        resalt = resalt / 10;
     }
     resalt = resalt % 10;   
     
@@ -27,19 +18,20 @@ int FriNumFind(int resalt) // решение функции поиска 3 ци�
 Console.Clear();
 Console.WriteLine("Веедите число. Компьютер найдет его третью цифру");
 int num = Convert.ToInt32(Console.ReadLine());
+int num1=num;
 if (num < 0)
 {
-    num = num * -1;
+    num1 = num * -1;
 }
 
-if (num > 99)
+if (num1 > 99)
 {
-    int FriNum = FriNumFind(num);
+    int FriNum = FriNumFind(num1);
     Console.WriteLine($"{num} -> {FriNum}");
 }
 else
 {
-    Console.WriteLine($"{num} -> Третьей цифры нет");
+    Console.WriteLine($"{num1} -> Третьей цифры нет");
 }
 
 
