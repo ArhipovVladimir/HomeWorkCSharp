@@ -20,7 +20,7 @@ void PrintTable(double [] tabl)
     int index = 1;
     while (index < tabl.Length)
      {
-        Console.WriteLine($"{index} - {tabl[index]}:");
+        Console.WriteLine($"|{index, 3} | {tabl[index], 4}|");
         index++;
      }
 }
