@@ -27,6 +27,7 @@ void PrintTable(double [] tabl)
 
 Console.WriteLine("Введите число");
 int digit = Convert.ToInt32(Console.ReadLine());
+digit=Math.Abs(digit);
 double [] tablCubArr = new double [digit+1];
 CubTabl(tablCubArr);
 Console.WriteLine($"Таблица кубов числа от 1 до {digit}");
