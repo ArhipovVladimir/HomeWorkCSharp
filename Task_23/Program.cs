@@ -20,7 +20,7 @@ void PrintTable(double [] tabl)
     int index = 1;
     while (index < tabl.Length)
      {
-        Console.Write($"{tabl[index]}, ");
+        Console.WriteLine($"{index} - {tabl[index]}:");
         index++;
      }
 }
@@ -29,5 +29,5 @@ Console.WriteLine("Введите число");
 int digit = Convert.ToInt32(Console.ReadLine());
 double [] tablCubArr = new double [digit+1];
 CubTabl(tablCubArr);
-Console.Write($"{digit} -> ");
+Console.WriteLine($"Таблица кубов числа от 1 до {digit}");
 PrintTable(tablCubArr);
