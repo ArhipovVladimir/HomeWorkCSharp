@@ -23,7 +23,7 @@ string Palindr(int num)
 }
 
 Console.Clear();
-Console.WriteLine("Введите пятизначное число");
+Console.WriteLine("Введите пятизначное число чтобы узнвть палиндром ли это");
 int digit = Convert.ToInt32(Console.ReadLine());
 digit = Math.Abs(digit);
 if (digit >= 100000 || digit <= 9999)
