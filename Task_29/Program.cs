@@ -8,22 +8,19 @@
 void FillArray (int [] collection)
 {
     int length = collection.Length;
-    int index=0;
-    while (index < length)
+    for (int index=0; index < length; index++)
     {
         collection[index] = new Random().Next (1, 100);
-        index++; 
     }
 }
 
 void PrintArray (int [] collection)
 {
     int length = collection.Length;
-    int index=0;
-    while (index < length)
+
+    for (int index=0; index < length; index++)
     {
         Console.Write($"{collection[index]}, ");
-        index++; 
     }
 }
 
