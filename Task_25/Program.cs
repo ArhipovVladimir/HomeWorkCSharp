@@ -20,11 +20,17 @@ int PowAB (int a, int b)
 Console.WriteLine("Введите два числа (А и В) компьютер выдаст ответ А в степени В");
 Console.Write("А:");
 int digitA = Convert.ToInt32(Console.ReadLine());
-digitA=Math.Abs(digitA);
 
 Console.Write("B:");
 int digitB = Convert.ToInt32(Console.ReadLine());
-digitB=Math.Abs(digitB);
 
-double resalt = PowAB(digitA, digitB);
-Console.WriteLine($"{digitA} в степени {digitB} Равно {resalt}");
+if (digitB > 0) 
+    {
+    double resalt = PowAB(digitA, digitB);
+    Console.WriteLine($"{digitA} в степени {digitB} Равно {resalt}");
+    }
+
+else {
+        Console.WriteLine("Алоритм не предусматривает возведение в степень меньше 0");
+     }
+
