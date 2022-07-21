@@ -8,9 +8,10 @@
 void FillArray (int [] collection)
 {
     int length = collection.Length;
+    Random r = new Random();
     for (int index=0; index < length; index++)
     {
-        collection[index] = new Random().Next (1, 100);
+        collection[index] = r.Next (1, 100);
     }
 }
 
