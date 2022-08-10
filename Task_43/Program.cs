@@ -11,9 +11,10 @@ int CetUsrerIntun()
 
 double [] FindPoint (int k1, int b1, int k2, int b2)
 {   
-    double x = (b2-b1)/(k1-k2);
+    double x = ((b2-b1)/(k1-k2));
     double y = k1*x+b1;
     return new double [] {x,y};
+    
 }
 
 Console.Clear();
@@ -28,6 +29,6 @@ int k2 = CetUsrerIntun();
 Console.Write("b2:");
 int b2 = CetUsrerIntun();
 double [] Point = FindPoint (k1, b1, k2, b2);
-Console.Write($"точка пересчечения прямых y={k1}*x+{b1}, y={k2}*x+{b2}");
+Console.Write($"точка пересчечения прямых y={k1}x+{b1}, y={k2}x+{b2}");
 Console.Write($" ({Point[0]}, {Point[1]})");
 
