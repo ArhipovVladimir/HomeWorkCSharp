@@ -6,7 +6,7 @@
 
 
 
-Console.Write ("Веедите число: ");
+Console.Write ("Веедите числа по окончании ввода числа нажмите Enter: ");
 int count = CountDigit ();
 Console.WriteLine($"числел больше нуля {count}");
 
