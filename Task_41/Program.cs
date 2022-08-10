@@ -17,5 +17,5 @@ int CountDigit ()
     string? d = Console.ReadLine();
     if (d=="") return 0;
     else if (Convert.ToInt32(d)>0) return 1 + CountDigit ();
-    else return 0 + CountDigit ();
+    return 0 + CountDigit ();
 }
