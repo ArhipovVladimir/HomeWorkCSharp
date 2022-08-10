@@ -6,12 +6,14 @@
 
 
 
-Console.Write ("Веедите числа по окончании ввода числа нажмите Enter: ");
+Console.Clear();
+Console.WriteLine ("Веедите числа по окончании ввода числа нажмите Enter");
 int count = CountDigit ();
 Console.WriteLine($"числел больше нуля {count}");
 
 int CountDigit ()
 {
+    Console.Write("Введите число: ");
     string? d = Console.ReadLine();
     if (d=="") return 0;
     else if (Convert.ToInt32(d)>0) return 1 + CountDigit ();
