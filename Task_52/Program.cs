@@ -33,7 +33,9 @@ void PrintArray (double [,] arr)
     {
         for (int j = 0; j < arr.GetLength(1); j++)
         {
-           Console.Write($"{arr[i,j]} ");  
+            if (j == 0) Console.Write ("[");
+            if (j < arr.GetLength(1) - 1) Console.Write ($"{arr[i,j],  3},");
+            else Console.Write ($"{arr[i,j],  3}]"); 
         }
         Console.WriteLine();
     }
@@ -64,7 +66,9 @@ void PrintArrayAvg (double [] arr)
     
     for (int i = 0; i < arr.Length; i++)
     {
-        Console.Write($"{arr[i]}; ");  
+         if (i == 0) Console.Write ("[");
+         if (i < arr.Length - 1) Console.Write ($"{arr[i]}- ");
+         else Console.Write ($"{arr[i]}]");  
     }
 }
 
@@ -79,4 +83,4 @@ PrintArray (array);
 double [] avgMassColum = new double [n];
 AvgColum (array, avgMassColum);
 Console.WriteLine("Среднее арифметическое каждого столбца:"); 
-PrintArrayAvg (avgMassColum); 
+PrintArrayAvg (avgMassColum);
