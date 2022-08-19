@@ -67,7 +67,7 @@ int FindElem (int [,] matrix, int [] poz)
 int [,] matrixResult = GetMatrix (3,4);
 PrintMatrix(matrixResult);
 Console.Write("введите позицию элемента показанном массиве в формате I.J: ");
-string? pozString = Console.ReadLine();
+string pozString = Console.ReadLine();
 int [] pozInt = ConvertInt (pozString);
 int elem = FindElem(matrixResult, pozInt);
 if (elem==-1) Console.WriteLine("Такого элемента нет");
