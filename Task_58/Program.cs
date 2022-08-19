@@ -46,17 +46,21 @@ void PrintMatrix (int [,] array)
 
 
 int [,] MatrixPow (int [,] matrix1, int [,] matrix2)
-{
-    int [,] matrixPow = new int [matrix1.GetLength(0), matrix1.GetLength(1)];
-    for (int i = 0; i < matrix1.GetLength(0); i++)
-    {
-        for (int j = 0; j < matrix1.GetLength(1); j++)
+{   
+    int[,] matrixPow = new int[matrix1.GetLength(0), matrix2.GetLength(1)];
+        for (int i = 0; i < matrix1.GetLength(0); i++)
         {
-            matrixPow [i,j] =matrix1[i,j]*matrix2[i,j];
+            for (int j = 0; j < matrix2.GetLength(1); j++)
+            {
+                for (int k = 0; k < matrix2.GetLength(0); k++)
+                {
+                    matrixPow[i,j] += matrix1[i,k] * matrix2[k,j];
+                }
+            }
         }
-    }
-    return matrixPow;
+            return matrixPow;
 }
+
 
 Console.WriteLine("Введите размер масиива MxN");
 Console.Write("M:");
@@ -64,7 +68,7 @@ int m = GetUserInput();
 Console.Write("N:");
 int n = GetUserInput();
 int [,] matrix1 = GetMatrix (m, n);
-int [,] matrix2 = GetMatrix (m, n);
+int [,] matrix2 = GetMatrix (n, m);
 PrintMatrix(matrix1);
 Console.WriteLine();
 PrintMatrix(matrix2);
