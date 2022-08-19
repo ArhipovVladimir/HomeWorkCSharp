@@ -12,7 +12,7 @@ int GetUserInput()
     return Convert.ToInt32(Console.ReadLine());
 }
 
-int [,] GetMatrix1 (int m, int n)
+int [,] GetMatrix (int m, int n)
 {
     int [,] array = new int [m,n];
     
@@ -44,20 +44,6 @@ void PrintMatrix (int [,] array)
 
 }
 
-int [,] GetMatrix2 (int m, int n)
-{
-    int [,] array = new int [m,n];
-    
-    Random rnd = new Random();
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            array [i, j] = rnd.Next(1, 10);
-        }
-    } 
-    return array;
-}
 
 int [,] MatrixPow (int [,] matrix1, int [,] matrix2)
 {
@@ -77,8 +63,8 @@ Console.Write("M:");
 int m = GetUserInput();
 Console.Write("N:");
 int n = GetUserInput();
-int [,] matrix1 = GetMatrix1 (m, n);
-int [,] matrix2 = GetMatrix2 (m, n);
+int [,] matrix1 = GetMatrix (m, n);
+int [,] matrix2 = GetMatrix (m, n);
 PrintMatrix(matrix1);
 Console.WriteLine();
 PrintMatrix(matrix2);
