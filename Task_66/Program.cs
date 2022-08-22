@@ -17,11 +17,14 @@ int PrintSum(int m, int n)
     
 }
 
-
+// программа считает сумму чисел не включая начальную и конечную цыфру
+//например  сумма чисел мужду 3 и 9 будет включать
+// 4+5+6+7+8 = 30 
 Console.WriteLine("Введите число M и N ");
 Console.Write("M: ");
 int m = GetUserInput();
 Console.Write("N: ");
 int n = GetUserInput();
-int result = PrintSum(m, n);
-Console.WriteLine($"Сумма натуральных чисел между {m} и {n} равна {result-n}");
+int n1 = n-1;
+int result = PrintSum(m, n1);
+Console.WriteLine($"Сумма натуральных чисел между {m} и {n} равна {result}");
